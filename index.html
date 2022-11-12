@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <meta name="Author" content="Harry Lee" />
+    <meta name="Description"
+        content="This Website is just for practice, I am not an author of this idea, but it writes on my code style. Ask directly authors in https://www.udemy.com/course/50-web-projects-with-html-css-and-javascript/ if you have some questions. Thank you" />
+    <link href="https://fonts.googleapis.com/css?family=Josefin+Sans:300,400,700|Montserrat:300,400,600"
+        rel="stylesheet" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+        integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous" />
+    <style>
+         /* ========== Overall Setting ========== */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+         /* ========== Page Setting ========== */
+
+        .container {
+            width: 100%;
+            height: 100vh;
+            background-color: #ddd;
+        }
+
+        .container .cards-wrapper {
+            width: 90%;
+            margin: auto;
+            height: 100%;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+        }
+
+        .container .cards-wrapper .card {
+            width: 300px;
+            background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.6)),
+                url(src/bg.jpg) center no-repeat;
+            background-size: cover;
+            color: #fff;
+            text-align: center;
+            border-radius: 10px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.8);
+            transition: all 0.4s;
+        }
+
+        .container .cards-wrapper .card:hover {
+            transform: scale(1.1);
+            box-shadow: 0 15px 60px rgba(0, 0, 0, 0.8);
+        }
+
+        .container .cards-wrapper .card-header {
+            margin-bottom: 40px;
+        }
+
+        .container .cards-wrapper .card .card-header h3 {
+            font-family: "Josefin Sans", sans-serif;
+            font-size: 30px;
+            font-weight: 300;
+            color: chocolate;
+            margin: 30px;
+            border-bottom: 1px groove #fff;
+            padding: 10px;
+        }
+
+        .container .cards-wrapper .card .card-header h1 {
+            font-family: "Josefin Sans", sans-serif;
+            font-size: 60px;
+            font-weight: 300;
+        }
+
+        .container .cards-wrapper .card .card-header sup {
+            font-size: 35px;
+        }
+
+        .container .cards-wrapper .card .card-header span {
+            font-size: 18px;
+        }
+
+        .container .cards-wrapper .card .card-body {
+            margin-bottom: 60px;
+        }
+
+        .container .cards-wrapper .card .card-body li {
+            list-style: none;
+            font-family: "Josefin Sans", sans-serif;
+            font-size: 16px;
+            font-weight: 300;
+            margin: 15px 0;
+        }
+
+        .container .cards-wrapper .card .card-body i {
+            margin-right: 25px;
+        }
+
+        .container .cards-wrapper .card .card-body .fa-check {
+            color: #0d683a;
+        }
+
+        .container .cards-wrapper .card .card-body .fa-times {
+            color: #911832;
+        }
+
+        .container .cards-wrapper .card .card-footer {
+            margin-bottom: 40px;
+        }
+
+        .container .cards-wrapper .card .card-footer button {
+            width: 120px;
+            padding: 10px;
+            background-color: chocolate;
+            color: #ddd;
+            font-family: "Montserrat", sans-serif;
+            font-size: 12px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            border: 2px solid chocolate;
+            border-radius: 50px;
+            outline: none;
+            cursor: pointer;
+        }
+
+        /* ========== Responsitive Website ========== */
+        @media (max-width: 1200px) {
+            .container {
+                height: 100%;
+            }
+
+            .cards-wrapper {
+                flex-wrap: wrap;
+            }
+
+            .card {
+                margin: 50px;
+            }
+        }
+    </style>
+    <title>Pricing Cards</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="cards-wrapper">
+            <div class="card">
+                <div class="card-header">
+                    <h3>Free</h3>
+                    <h1><sup>$</sup> 0</h1>
+                </div>
+                <div class="card-body">
+                    <ul>
+                        <li><i class="fas fa-check"></i>Some Feature Text</li>
+                        <li><i class="fas fa-check"></i>Some Feature Text</li>
+                        <li><i class="fas fa-times"></i>Some Feature Text</li>
+                        <li><i class="fas fa-times"></i>Some Feature Text</li>
+                        <li><i class="fas fa-times"></i>Some Feature Text</li>
+                        <li><i class="fas fa-times"></i>Some Feature Text</li>
+                    </ul>
+                </div>
+                <div class="card-footer">
+                    <button type="button">Subscribe</button>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-header">
+                    <h3>Standard</h3>
+                    <h1><sup>$</sup> 49 /<span>Month</span></h1>
+                </div>
+                <div class="card-body">
+                    <ul>
+                        <li><i class="fas fa-check"></i>Some Feature Text</li>
+                        <li><i class="fas fa-check"></i>Some Feature Text</li>
+                        <li><i class="fas fa-check"></i>Some Feature Text</li>
+                        <li><i class="fas fa-check"></i>Some Feature Text</li>
+                        <li><i class="fas fa-times"></i>Some Feature Text</li>
+                        <li><i class="fas fa-times"></i>Some Feature Text</li>
+                    </ul>
+                </div>
+                <div class="card-footer">
+                    <button type="button">Subscribe</button>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-header">
+                    <h3>Premium</h3>
+                    <h1><sup>$</sup> 99 /<span>Month</span></h1>
+                </div>
+                <div class="card-body">
+                    <ul>
+                        <li><i class="fas fa-check"></i>Some Feature Text</li>
+                        <li><i class="fas fa-check"></i>Some Feature Text</li>
+                        <li><i class="fas fa-check"></i>Some Feature Text</li>
+                        <li><i class="fas fa-check"></i>Some Feature Text</li>
+                        <li><i class="fas fa-check"></i>Some Feature Text</li>
+                        <li><i class="fas fa-check"></i>Some Feature Text</li>
+                    </ul>
+                </div>
+                <div class="card-footer">
+                    <button type="button">Subscribe</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
